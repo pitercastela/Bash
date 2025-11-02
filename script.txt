@@ -3,7 +3,9 @@
 trap '' 2 
 
 func1 () {
-    echo "###############################################################
+while true
+    do
+echo "###############################################################
 # IBMEC                                                       #
 # Sistemas Operacionais Semestre 2 de 2025                    #
 # Código: IBM0791 Turma: 8001                                 #
@@ -17,9 +19,6 @@ func1 () {
 # Rio de Janeiro, `date +%d` de `date +%b` de `date +%Y`                           #
 # Hora do Sistema: `date +%H` Horas e `date +%M` Minutos                      #
 ###############################################################"
-
-while true
-    do
 
 echo "Menu de escolhas: 
 

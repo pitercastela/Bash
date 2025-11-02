@@ -3,8 +3,6 @@
 trap '' 2 
 
 func1 () {
-while true
-do
     echo "###############################################################
 # IBMEC                                                       #
 # Sistemas Operacionais Semestre 2 de 2025                    #
@@ -18,9 +16,12 @@ do
 #-------------------------------------------------------------#
 # Rio de Janeiro, `date +%d` de `date +%b` de `date +%Y`                           #
 # Hora do Sistema: `date +%H` Horas e `date +%M` Minutos                      #
-###############################################################
+###############################################################"
 
-Menu de escolhas: 
+while true
+    do
+
+echo "Menu de escolhas: 
 
     1)
     2)
@@ -32,34 +33,38 @@ Menu de escolhas:
     read escolha
     case $escolha in
 
-  1)
-    echo "1
-    "
-    sleep 2
-    ;;
+        1)
+            echo "1
+            "
+            sleep 1
+            ;;
 
-  2)
-    echo "2
-    "
-    ;;
+        2)
+            echo "2
+            "
+            ;;
 
-  3)
-    echo "3
-    "
-    ;;
+        3)
+            echo "3
+            "
+            ;;
 
-  4)
-    echo "4
-    "
-    ;;
+        4)
+            echo "4
+            "
+            ;;
     
-  5)
-    trap 2
-    break
-    ;;    
+        5)
+            trap 2
+            break
+            ;;    
+
+        *)
+            echo "Opção inválida"
+            sleep 1
+            ;;
+
 esac
-
-    
     done
 }
 func1

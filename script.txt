@@ -1,0 +1,65 @@
+#!bin/bash
+
+trap '' 2 
+
+func1 () {
+while true
+do
+    echo "###############################################################
+# IBMEC                                                       #
+# Sistemas Operacionais Semestre 2 de 2025                    #
+# Código: IBM0791 Turma: 8001                                 #
+# Professor: Luiz Fernando T. de Farias                       #
+#-------------------------------------------------------------#
+# Equipe Desenvolvedora:                                      #
+# Aluno: Lucas Alves Castela Pereira                          #
+# Aluno: Rodrigo de Souza Ferrett                             #
+# Aluno: Sarah Ferrari                                        #
+#-------------------------------------------------------------#
+# Rio de Janeiro, `date +%d` de `date +%b` de `date +%Y`                           #
+# Hora do Sistema: `date +%H` Horas e `date +%M` Minutos                      #
+###############################################################
+
+Menu de escolhas: 
+
+    1)
+    2)
+    3)
+    4)
+    5) Finalizar programa."
+    
+    
+    read escolha
+    case $escolha in
+
+  1)
+    echo "1
+    "
+    sleep 2
+    ;;
+
+  2)
+    echo "2
+    "
+    ;;
+
+  3)
+    echo "3
+    "
+    ;;
+
+  4)
+    echo "4
+    "
+    ;;
+    
+  5)
+    trap 2
+    break
+    ;;    
+esac
+
+    
+    done
+}
+func1

@@ -10,4 +10,4 @@
     - Alterar a quantidade
     - Alterar nome do livro
     - Alterar nome do autor
-
+5) Explodir o script (parar)

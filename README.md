@@ -6,8 +6,11 @@
     - remover um livro do banco
 2) Listar todos os livros
 3) Buscar um livro especifico dentro do banco
-4) Alterar dados de um livro
+    - buscar por nome do livro
+    - buscar por nome do autor
+    - (As duas buscas usam o mesmo código kkkkkkkkkkkkk n muda nada)
+5) Alterar dados de um livro
     - Alterar a quantidade
     - Alterar nome do livro
     - Alterar nome do autor
-5) Explodir o script (parar)
+6) Explodir o script (parar)

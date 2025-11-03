@@ -7,8 +7,7 @@
 2) Listar todos os livros
 3) buscar um livro especifico dentro do banco
 4) Alterar dados de um livro
-    - Adicionar a quantidade
-    - Remover a quantidade
+    - Alterar a quantidade
     - Alterar nome do livro
     - Alterar nome do autor
 

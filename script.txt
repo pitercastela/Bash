@@ -1,11 +1,17 @@
 #!bin/bash
 
 trap '' 2 
+mkdir dir
+cd ./dir
 
-func1 () {
-while true
-    do
-echo "###############################################################
+touch biblioteca_log.txt
+cat biblioteca_log.txt
+
+
+
+cabecalho () {
+    
+    echo "###############################################################
 # IBMEC                                                       #
 # Sistemas Operacionais Semestre 2 de 2025                    #
 # Código: IBM0791 Turma: 8001                                 #
@@ -19,7 +25,12 @@ echo "###############################################################
 # Rio de Janeiro, `date +%d` de `date +%b` de `date +%Y`                           #
 # Hora do Sistema: `date +%H` Horas e `date +%M` Minutos                      #
 ###############################################################"
+}
 
+menu () {
+while true
+    do
+    cabecalho
 echo "Menu de escolhas: 
 
     1)
@@ -33,14 +44,11 @@ echo "Menu de escolhas:
     case $escolha in
 
         1)
-            echo "1
-            "
-            sleep 1
+            adicionar_remover_arquivos
             ;;
 
         2)
-            echo "2
-            "
+            cat biblioteca_log.txt
             ;;
 
         3)
@@ -66,4 +74,66 @@ echo "Menu de escolhas:
 esac
     done
 }
-func1
+
+adicionar_remover_arquivos () {
+    echo
+    cabecalho
+    
+    while true
+    do
+echo "Menu de escolhas: 
+
+    1) Adicionar
+    2) Remover
+    3) Finalizar programa."
+    
+    
+    read escolha
+    case $escolha in
+
+        1)
+            sleep 1
+            adicionar
+            ;;
+
+        2)
+            echo "2
+            "
+            ;;
+
+        3)
+            echo "3
+            "
+            break
+            ;;
+
+        *)
+            echo "Opção inválida"
+            sleep 1
+            ;;
+
+esac
+    done
+    
+    
+}
+
+adicionar() {
+    echo "Digite o nome do livro."
+    read livro
+    echo "Digite o nome do autor do livro."
+    read autor
+    echo "Digite uma descrição breve do livro"
+    read desc
+    echo "Digite a quantidade em estoque do livro"
+    read qtd
+    
+    echo "[LIVRO]: $livro | [AUTOR]: $autor | [DESC]: $desc | [QTD]: $qtd" >> biblioteca_log.txt
+}
+
+
+
+
+
+
+menu

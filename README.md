@@ -5,7 +5,7 @@
     - adiciona um livro ao banco ([LIVRO]: doc.pdf | [AUTOR]: Lucas | [DESC]: Relatorio | [QTD]: 5) formato pensado
     - remover um livro do banco
 2) Listar todos os livros
-3) buscar um livro especifico dentro do banco
+3) Buscar um livro especifico dentro do banco
 4) Alterar dados de um livro
     - Alterar a quantidade
     - Alterar nome do livro

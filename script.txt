@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 trap '' 2 
 mkdir dir
@@ -6,6 +6,7 @@ cd ./dir
 
 touch biblioteca_log.txt
 cat biblioteca_log.txt
+
 
 
 
@@ -35,8 +36,8 @@ echo "Menu de escolhas:
 
     1) Adicionar ou remover livros
     2) Listar livros
-    3)
-    4)
+    3) Buscar livro
+    4) Editar dados
     5) Finalizar programa."
     
     
@@ -63,13 +64,11 @@ echo "Menu de escolhas:
             ;;
 
         3)
-            echo "3
-            "
+            buscar_livro
             ;;
 
         4)
-            echo "4
-            "
+            editar_arquivo
             ;;
     
         5)
@@ -104,12 +103,14 @@ echo "Menu de escolhas:
 
         1)
             sleep 1
+	clear
             adicionar
             ;;
 
         2)
-            echo "2
-            "
+             sleep 1
+	clear
+            remover
             ;;
 
         3)
@@ -129,6 +130,61 @@ esac
     
 }
 
+editar_arquivo () {
+    echo
+    cabecalho
+    
+    while true
+    do
+echo "Menu de escolhas: 
+
+    1) Alterar quantidade
+    2) Alterar nome do livro
+    3) Alterar nome do autor
+    4) Alterar descricao
+    5) Voltar"
+    
+    
+    read escolha
+    case $escolha in
+
+        1)
+            sleep 1
+	clear
+            echo “1”
+            ;;
+
+        2)
+            echo "2
+            "
+            ;;
+
+        3)
+            echo "3
+            "
+            ;;
+       4)
+            echo "4
+            "
+            ;;
+       5)
+            echo "5
+            "
+            break
+            ;;
+
+        *)
+            echo "Opção inválida"
+            sleep 1
+            ;;
+
+esac
+    done
+    
+    
+}
+
+
 adicionar() {
     echo "Digite o nome do livro."
     read livro
@@ -138,13 +194,19 @@ adicionar() {
     read desc
     echo "Digite a quantidade em estoque do livro"
     read qtd
-    
-    echo "[LIVRO]: $livro | [AUTOR]: $autor | [DESC]: $desc | [QTD]: $qtd" >> biblioteca_log.txt
+    id=`wc -l < biblioteca_log.txt`
+    echo "[ID]: $id | [LIVRO]: $livro | [AUTOR]: $autor | [DESC]: $desc | [QTD]: $qtd" >> biblioteca_log.txt
+}
+remover(){
+
 }
 
 
 
 
 
-
 menu
+
+
+
+

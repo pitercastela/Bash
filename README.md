@@ -15,4 +15,4 @@
     - Alterar nome do livro
     - Alterar nome do autor
     - Alterar descrição 
-6) Explodir o script (parar)
+6) Parar o script
